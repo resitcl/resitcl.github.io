@@ -1,18 +1,18 @@
 (function($) {
 	"use strict";
-	
+
 	var $window = $(window),
 		separator = $('body').data('separator'), // get separator type
 		mobile_animate = $('body').data('mobile-animate'), // enable mobile animation
 		navHeight = $('.nav').height(); // nav height
-	
+
 	/* On Load */
 	$window.load(function() { // makes sure the whole site is loaded
 		$('#status').fadeOut(); // will first fade out the loading animation
 		$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
 		$('body').delay(450).removeClass('preload'); // Animate CSS after page load
 	});
-	
+
 	/* Load SVG */
 	if(Modernizr.inlinesvg && separator !== undefined) { //if inlinesvg supported and separator type defined
 
@@ -45,7 +45,7 @@
 	if(!Modernizr.svg) {
 		$("#nav-toggle").find("img[src='img/icon-menu.svg']").attr('src', 'img/icon-menu.png');
 	}
-	
+
 	/* Mobile Nav */
 	$('#nav-toggle').click(function(){
 		$(this).toggleClass('active');
@@ -67,7 +67,7 @@
 		/* Reset mobile menu nav state */
 		$(this).parent().removeClass('open');
 		$('#nav-toggle').removeClass('active');
-	
+
 		scrollToTarget($(this).attr("href"));
 
 		return false;
@@ -75,12 +75,12 @@
 
 	/* Same Page Navigation Click */
 	$('a[href*=#]:not([href=#])').click( function() {
-	
+
 		scrollToTarget($(this).attr("href"));
-		
+
 		return false;
 	});
-	
+
 	/* if URL has hash */
 	$(function(){
 		if(window.location.hash) scrollToTarget(window.location.hash);
@@ -93,7 +93,7 @@
 
         return false;
     });
-	
+
 	/* Add modernizr test to check preserve-3d browser support for text-rotator https://gist.github.com/Matori/4123325 */
 	Modernizr.addTest('csstransformspreserve3d', function () {
 
@@ -171,7 +171,7 @@
 		});
 
 	},{offset: '100%',triggerOnce: true});
-	
+
 	/* Opening Section Animation */
 	if(mobile_animate === true && mobile_animate !== undefined) { // animate on scroll on all devices!
 		animateOnScroll();
@@ -191,7 +191,7 @@
 		}
 	};
 	filterList.init();// Run Mixitup!
-	
+
 	/* Magnific Popup Image*/
 	$('.portfolio-image').magnificPopup({
 		type: 'image',
@@ -202,12 +202,12 @@
 			easing: 'ease-in-out' // CSS transition easing function
 		}
 	});
-	
+
 	/* Magnific Popup Video*/
 	$('.portfolio-video').magnificPopup({
 		type: 'iframe'
 	});
-	
+
 	/* Magnific Popup Ajax for Portfolio and Post */
 	$('.portfolio-ajax, .post-ajax').magnificPopup({
 		type: 'ajax',
@@ -218,7 +218,7 @@
 			parseAjax: function( mfpResponse ) {
 
 				var fragment = ( '#post' ); // only fragment with parent element with id="post"
-				
+
 				mfpResponse.data = $( mfpResponse.data ).filter( fragment );
 			},
 			ajaxContentAdded: function() {
@@ -237,10 +237,10 @@
 			}
 		}
 	});
-	
+
 	/* function to check if element exist after once the ajax is loaded and appended to the DOM */
-	$.existsin = function (what, where) { 
-		return jQuery(where).find(what).length > 0; 
+	$.existsin = function (what, where) {
+		return jQuery(where).find(what).length > 0;
 	}
 
 	/* Owl Carousel Client Section */
@@ -331,11 +331,11 @@
 			}
 		);
 	}
-	
+
 	/* function to animate on scroll */
 	function animateOnScroll(){
 		$('.anim').addClass('transparent'); // hide (make transparent) all elements before animation
-		
+
 		$('.anim').waypoint(function(direction){
 
 			var anim = $(this).data('anim');
@@ -349,7 +349,7 @@
 	function initialize(){
 
 		var map_canvas = document.getElementById('map');
-		var myLatlng = new google.maps.LatLng(59.328930000000010000,18.064910000000054000); // set your location here
+		var myLatlng = new google.maps.LatLng(-33.417067, -70.592182); // set your location here
 		var map_options = {
 			center: myLatlng,
 			zoom: 16,
@@ -387,5 +387,3 @@
 	}
 	google.maps.event.addDomListener(window, 'load', initialize);
 })(jQuery);
-
-

@@ -1,16 +1,13 @@
 /* Supersized Fullscreen Background Slideshow */
 (function($) {
 	"use strict";
-	
 	/* Check if website opened on mobile devices and fallback image slideshow to static image on mobile devices */
 	if(jQuery.browser.mobile){
-		
-		var bgImage = 'img/background/bg-1.jpg'; // static image for mobile devices
-	
+		var bgImage = 'img/mac-1.jpg'; // static image for mobile devices
 		/* Use fullscreen image */
 		$('#header').append('<div style="background-image: url(' + bgImage + ');" class="fullscreen-bg"></div>');
-	}else{
-	
+	} else {
+
 		$(function(){
 			$.supersized({
 				horizontal_center		:	1,			// Horizontal center
@@ -25,9 +22,9 @@
 				// Components
 				slide_links				:	'false',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 				slides					:	[			// Slideshow Images
-						{image : 'img/background/bg-1.jpg', title : '', thumb : '', url : ''},
-						{image : 'img/background/bg-2.jpg', title : '', thumb : '', url : ''},
-						{image : 'img/background/bg-3.jpg', title : '', thumb : '', url : ''}
+						{image : 'img/bb-4-resized.jpg', title : '', thumb : '', url : ''},
+						{image : 'img/mac-1.jpg', title : '', thumb : '', url : ''},
+						{image : 'img/bb-1.jpg', title : '', thumb : '', url : ''}
 				]
 			});
 		});
