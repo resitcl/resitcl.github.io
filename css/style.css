@@ -217,6 +217,24 @@ img{
 	fill: #1d1d1d;
 }
 
+.client img {
+	height: 90px; /* you can use % */
+	width: auto;
+	max-width: none;
+	margin: 20px;
+}
+
+
+@media (max-width: 991px) {
+  .client-list {
+    text-align: center;
+	display: inline-block;
+	float: none;
+  }
+  .client-list > * {
+    text-align: initial;
+  }
+}
 /* h1 Logo Style */
 .logo{
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -226,13 +244,13 @@ img{
 	color: #ffffff;
 
 	display: inline-block;
-    width: 78px;
-    height: 43px;
-
+	width:100px; /* you can use % */
+    height: auto;
+	background-size: 100px auto;
     background-image: url(../img/logo.png);
 	background-position:center;
 	background-repeat:no-repeat;
-	background-size:78px 43px;
+	/*background-size:78px 43px;*/
     background-color: transparent;
     border: 0;
     overflow: hidden;
@@ -1501,7 +1519,7 @@ img{
    ========================================================================== */
 
 #contact{
-	background: transparent url("../img/contact-1.jpg") no-repeat center center fixed; 
+	background: transparent url("../img/contact-1.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

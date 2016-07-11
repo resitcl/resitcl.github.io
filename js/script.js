@@ -244,12 +244,12 @@
 	}
 
 	/* Owl Carousel Client Section */
-	$(".client-carousel").owlCarousel({
+	/*$(".client-carousel").owlCarousel({
 		navigation: false,
 		autoPlay: true,
 		slideSpeed : 500,
 		paginationSpeed : 500
-	});
+	});*/
 
 	/* Owl Carousel Quotes Section */
 	$(".quotes-carousel").owlCarousel({
