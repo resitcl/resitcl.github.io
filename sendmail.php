@@ -1,8 +1,8 @@
 <?php
 
 // change this
-define("EMAIL_ADDRESS", 'yourmail@domain.com');
-define("EMAIL_SUBJECT", 'Contact Form Submission');
+define("EMAIL_ADDRESS", 'contacto@resit.cl');
+define("EMAIL_SUBJECT", 'Contacto desde Landing Page');
 
 if(isset($_POST) && !empty($_POST)){
 
@@ -60,7 +60,7 @@ function validateEmail($email){
 	}else{
 		$eregi = preg_replace('/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/', '', $email);
 	}
-	
+
 	return empty($eregi) ? true : false;
 }
 ?>
