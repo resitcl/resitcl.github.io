@@ -1,6 +1,17 @@
 (function($) {
 	"use strict";
 
+	$(document).ready(function(){
+		$('.variable-width').not('.slick-initialized').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			centerMode: true,
+			variableWidth: true
+		});
+	})
+
 	var $window = $(window),
 		separator = $('body').data('separator'), // get separator type
 		mobile_animate = $('body').data('mobile-animate'), // enable mobile animation
@@ -11,6 +22,37 @@
 		$('#status').fadeOut(); // will first fade out the loading animation
 		$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
 		$('body').delay(450).removeClass('preload'); // Animate CSS after page load
+	});
+
+	/* Contact form */
+	$('#submit-contact').click(function(){
+		if(  $('#contact-form-name').val().length < 1
+		|| $('#contact-form-mail').val().length < 1
+		|| $('#contact-form-message').val().length < 1){
+			$('#submit-contact').css('background', '#bf0000')
+			$('#submit-contact').val("Faltan datos")
+			return;
+		}
+		$.post("https://hooks.slack.com/services/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",
+			JSON.stringify({
+				"channel": "#contacto-landing",
+				"username": "Contact-Bot",
+				"text": "Se recibió el siguiente mensaje desde la página web:\n" +
+					"*Nombre*: " + $('#contact-form-name').val() + "\n" +
+					"*Mail:* " + $('#contact-form-mail').val() + "\n" +
+					"*Mensaje:*\n" + $('#contact-form-message').val(),
+				"icon_emoji": ":warning:"
+			}),
+		function() {
+
+		})
+		.done(function() {
+			$('#submit-contact').css('background', '#27ae60');
+			$('#submit-contact').val("Mensaje enviado");
+		})
+		.fail(function(error) {
+			console.log(error);
+		})
 	});
 
 	/* Load SVG */
@@ -260,26 +302,6 @@
 		singleItem:true
 	});
 
-	/* Ajax Contact form submit */
-	$("#contact-form").submit(function() {
-
-		var url = "sendmail.php"; // the script where you handle the form input.
-
-		$(".form-notification").remove(); // remove all previous notifications
-
-		$.ajax({
-			type: "POST",
-			url: url,
-			data: $("#contact-form").serialize(), // serializes the form's elements.
-			success: function(data)
-			{
-				$("#contact-form").append(data); // show response from the php script.
-			}
-		});
-
-		return false; // avoid to execute the actual submit of the form.
-	});
-
 	/* function to get SVG separator */
 	function getSeparator( sourceUrl )
 	{
@@ -344,6 +366,7 @@
 
 		},{offset: '95%',triggerOnce: true});
 	}
+
 
 	/* Google Maps */
 	function initialize(){

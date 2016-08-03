@@ -224,17 +224,15 @@ img{
 	margin: 20px;
 }
 
-
-@media (max-width: 991px) {
-  .client-list {
-    text-align: center;
+.client-list {
+	text-align: center;
 	display: inline-block;
 	float: none;
-  }
-  .client-list > * {
-    text-align: initial;
-  }
 }
+.client-list > * {
+	text-align: initial;
+}
+
 /* h1 Logo Style */
 .logo{
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -401,6 +399,7 @@ img{
 .two_third{ width: 66.0%; }
 .one_fourth{ width: 23.5%; }
 .three_fourth{ width: 74.5%; }
+.one_fifth{ width: 20.0%; }
 
 @media only screen and (min-width: 768px) and (max-width: 979px){
 
@@ -1519,7 +1518,7 @@ img{
    ========================================================================== */
 
 #contact{
-	background: transparent url("../img/contact-1.jpg") no-repeat center center fixed;
+	background: transparent url("../img/contact-2.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1530,48 +1529,47 @@ img{
 	color: white;
 }
 
-#contact form{
+#contact #form{
 	position: relative;
 	margin: 0 auto;
 	max-width: 620px;
 }
 
-#contact form input,
-#contact form textarea{
+#contact #form input,
+#contact #form textarea{
 	display: block;
 	margin-bottom: 20px;
 	padding: 10px;
 	width: 100%;
 	border: 2px solid #fff;
-	background: rgb(64,64,64);
-	background: rgba(64,64,64,0.1);
-	color: #fff;
+	background: #fff;
+	color: #000;
 	font-family: Open Sans, Arial, sans-serif;
 }
 
-#contact form textarea{
+#contact #form textarea{
 	min-height: 200px;
     resize: vertical;
 }
 
-#contact form input:focus,
-#contact form textarea:focus,
-#contact form label:active + input,
-#contact form label:active + textarea{
+#contact #form input:focus,
+#contact #form textarea:focus,
+#contact #form label:active + input,
+#contact #form label:active + textarea{
 	outline: none;
 	border: 2px solid #fff;
 	background: #fff;
 	color: #666;
 }
 
-#contact form input.submit{
+#contact #form input.submit{
 	display: inline-block;
 	margin-bottom: 0;
 	padding: 10px;
 	border: 2px solid #ffffff;
 	background: rgb(64,64,64);
 	background: rgba(64,64,64,0.1);
-	color: #fff;
+	color: #000;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	cursor: pointer;
@@ -1582,7 +1580,7 @@ img{
 	transition: background 0.2s ease-in-out;
 }
 
-#contact form input.submit:hover{
+#contact #form input.submit:hover{
 	background: #ffffff;
 	color: #1d1d1d;
 }
