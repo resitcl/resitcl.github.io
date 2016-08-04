@@ -1,6 +1,12 @@
 (function($) {
 	"use strict";
 
+	$(window).load(function(){
+		window.setTimeout(function(){
+			$(window).trigger('resize');
+		}, 2000);
+	})
+
 	$(document).ready(function(){
 		$('.variable-width').not('.slick-initialized').slick({
 			dots: true,
