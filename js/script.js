@@ -17,13 +17,16 @@
 			variableWidth: true
 		});
 
-		$('.grid').masonry({
-		  // set itemSelector so .grid-sizer is not used in layout
-		  itemSelector: '.grid-item',
-		  // use element for option
-		  columnWidth: '.grid-sizer',
-		  percentPosition: true
-		})
+		$('.tecs').not('.slick-initialized').slick({
+			dots: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 10,
+			centerMode: true,
+			variableWidth: true
+		});
+
+		$('.slick-next').css('background-color', '#373737')
 	})
 
 	var $window = $(window),
