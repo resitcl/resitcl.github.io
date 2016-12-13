@@ -26,6 +26,7 @@
 		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
+
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/font-awesome.css">
@@ -54,6 +55,10 @@
 			window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
 			heap.load("3440379294");
 		</script>
+
+		<!-- Vex Modal -->
+		<link rel="stylesheet" href="css/vex.css" />
+		<link rel="stylesheet" href="css/vex-theme-os.css" />
 	</head>
 
 	<!-- Body, add data-separator to set layout type, option: skew, slopy or triangle. -->
@@ -204,7 +209,7 @@
 
 				<div class="service-block grayscale row">
 					<div class="service-icon text-center half column anim" data-anim="fadeInLeft">
-						<img src="img/services/tailor1.png" style="height: 400px; width: 400px;" alt="">
+						<img src="img/services/tuxedo.png" style="height: 250px; width: 250px;" alt="">
 					</div><!--/. column -->
 					<div class="service-body half column anim" data-anim="fadeInRight">
 						<h2>Desarrollo de software a la medida</h2>
@@ -214,7 +219,7 @@
 
 				<div class="service-block grayscale row">
 					<div class="service-icon text-center half column anim" data-anim="fadeInRight">
-						<img src="img/services/service-2.png" alt="">
+						<img src="img/services/browser.png" style="height: 250px; width: 250px;" alt="">
 					</div><!--/. column -->
 					<div class="service-body half column anim" data-anim="fadeInLeft">
 						<h2>Desarrollo y diseño de plataformas web</h2>
@@ -224,7 +229,7 @@
 
 				<div class="service-block grayscale row">
 					<div class="service-icon text-center half column anim" data-anim="fadeInLeft">
-						<img src="img/services/service-3.png" alt="">
+						<img src="img/services/smartphone.png" style="height: 250px; width: 250px;" alt="">
 					</div><!--/. column -->
 					<div class="service-body half column anim" data-anim="fadeInRight">
 						<h2>Aplicaciones Móviles</h2>
@@ -234,7 +239,7 @@
 
 				<div class="service-block grayscale row">
 					<div class="service-icon text-center half column anim" data-anim="fadeInRight">
-						<img src="img/services/service-4.png" alt="">
+						<img src="img/services/consulting.png" style="height: 250px; width: 250px;" alt="">
 					</div><!--/. column -->
 					<div class="service-body half column anim" data-anim="fadeInLeft">
 						<h2>Consultoría Tecnológica</h2>
@@ -301,7 +306,7 @@
 						<div id="portfolio-grid" class="clearfix anim" data-anim="fadeIn">
 							<div class="portfolio-block mobile-app">
 								<div class="portfolio-wrapper">
-									<a href="img/works/work-1-big.png" class="portfolio-image">
+									<a onclick="showProjectModal(this);" data-projid="1">
 										<img src="img/works/work-1.png" alt="img/works/work-1.png">
 										<div class="label-block">
 											<div class="label-text text-center">
@@ -316,7 +321,7 @@
 							</div>
 							<div class="portfolio-block website">
 								<div class="portfolio-wrapper">
-									<a href="img/works/work-2.png" class="portfolio-image">
+									<a onclick="showProjectModal(this);" data-projid="2">
 										<img src="img/works/work-2.png" alt="img/works/work-2.png">
 										<div class="label-block">
 											<div class="label-text text-center">
@@ -331,7 +336,7 @@
 							</div>
 							<div class="portfolio-block website">
 								<div class="portfolio-wrapper">
-									<a href="img/works/work-3.png" class="portfolio-image">
+									<a onclick="showProjectModal(this);" data-projid="3">
 										<img src="img/works/work-3.png" alt="img/works/work-3.png">
 										<div class="label-block">
 											<div class="label-text text-center">
@@ -496,6 +501,21 @@
 
 		</footer>
 		<!-- End Footer -->
+		<div id="project-modal" class="vex vex-theme-os" style="display: none">
+			<div class="vex-overlay"></div>
+			<div class="vex-content modal-container">
+				<div class="service-block row"><!--
+					<div class="service-icon text-center half column">
+						<img src="img/services/tailor1.png" style="height: 400px; width: 400px;" alt="">
+					</div>column -->
+					<div class="service-body half column">
+						<i class="fa fa-times modal-cross" aria-hidden="true" onclick="hideModal();"></i>
+						<h3 id="project-modal-title"></h3>
+						<p id="project-modal-description"></p>
+					</div><!--/. column -->
+				</div><!--/. row -->
+			</div>
+		</div>
 
 		<!-- Retinajs -->
 		<script src="js/retina-1.1.0.min.js"></script>
@@ -524,6 +544,10 @@
 		<script src="js/script.js"></script>
 
 		<script type="text/javascript" src="slick/slick.min.js"></script>
+
+		<script src="js/vex.combined.min.js"></script>
+		<script>vex.defaultOptions.className = 'vex-theme-os'</script>
+		<script src="js/projectdescriptions.js"></script>
 
 	</body>
 </html>

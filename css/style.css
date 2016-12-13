@@ -1258,9 +1258,6 @@ img{
 	color: #222222;
 	display: block;
 }
-#portfolio-grid .portfolio-block a:hover{
-	cursor: crosshair;
-}
 
 #portfolio-grid .portfolio-block img{
 	width:100%;
@@ -2045,7 +2042,9 @@ img{
 	text-align: center;
 }
 
-
+.modal-container {
+	max-width: 800px
+}
 
 /* ==========================================================================
    MEDIA QUERIES
@@ -2065,6 +2064,9 @@ img{
 		max-width: 300px;
 	}
 
+	.modal-container {
+		max-width: 90%
+	}
 }
 
 /* Landscape phone to portrait tablet */
@@ -2219,6 +2221,10 @@ img{
 		left: auto;
 		margin: -65px 20px 0 0;
 	}
+
+	.modal-container {
+		max-width: 90%
+	}
 }
 
 /* Landscape phones and down */
@@ -2236,6 +2242,10 @@ img{
 	#four-oh-four .content-block .content-text h1 {
 		font-size: 128px;
 	}
+
+	.modal-container {
+		max-width: 100%
+	}
 }
 
 /* Retina Display */
@@ -2252,4 +2262,12 @@ only screen and (                min-resolution: 2dppx) {
 	#status{
 		background-image: url(../img/AjaxLoader@2x.gif);
 	}
+}
+
+
+/* Santiago Custom */
+.modal-cross{
+	float: right;
+	cursor: pointer;
+	cursor: hand;
 }

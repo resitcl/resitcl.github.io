@@ -29,10 +29,13 @@
 		$('.slick-next').css('background-color', '#373737')
 	})
 
+	
+
 	var $window = $(window),
 		separator = $('body').data('separator'), // get separator type
 		mobile_animate = $('body').data('mobile-animate'), // enable mobile animation
 		navHeight = $('.nav').height(); // nav height
+
 
 	/* On Load */
 	$window.load(function() { // makes sure the whole site is loaded
