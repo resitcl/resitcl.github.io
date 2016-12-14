@@ -1249,7 +1249,7 @@ img{
 #portfolio-grid .portfolio-wrapper{
 	position: relative !important;
 	overflow:hidden;
-	background: #ffffff;
+	/*background: #ffffff;*/
 	cursor:pointer;
 }
 

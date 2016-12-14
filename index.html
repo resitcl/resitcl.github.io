@@ -281,6 +281,21 @@
 		<!-- End Section -->
 
 		<!-- Start Section: Works -->
+		<div id="portfolio-to-inject" style="display: none" class="portfolio-block website">
+			<div class="portfolio-wrapper">
+				<a id="portfolio-a" onclick="showProjectModal(this);">
+					<img id="portfolio-image-thumbnail">
+					<div class="label-block">
+						<div class="label-text text-center">
+							<div class="label-text-inner">
+								<h3 id="portfolio-text-title" class="text-title"></h3>
+								<span id="portolio-text-classification" class="text-category"></span>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
 		<section id="works" class="darken pull">
 			<div class="container">
 				<div class="row" >
@@ -298,16 +313,50 @@
 							<ul class="text-center">
 								<li><span class="filter active" data-filter="website mobile-app user-interface video">All</span></li>
 								<li><span class="filter" data-filter="website">Web</span></li>
-								<li><span class="filter" data-filter="mobile-app">App</span></li>
+								<li><span class="filter" data-filter="mobile-app">Móvil</span></li>
 								<!--<li><span class="filter" data-filter="user-interface">UI</span></li>-->
 								<!--<li><span class="filter" data-filter="video">Video</span></li>-->
 							</ul>
 						</div>
+
+						<!-- START The modal -->
+						<div id="project-modal" class="vex vex-theme-os" style="display: none">
+							<div class="vex-overlay"></div>
+							<div class="vex-content modal-container">
+								<div class="service-block row">
+									<div class="service-icon text-center half column">
+										<img id="project-modal-image" style="height: 400px; width: 400px;" alt="">
+									</div><!--column -->
+									<div class="service-body half column">
+										<i class="fa fa-times modal-cross" aria-hidden="true" onclick="hideModal();"></i>
+										<h3 id="project-modal-title"></h3>
+										<p id="project-modal-description"></p>
+									</div><!--/. column -->
+								</div><!--/. row -->
+							</div>
+						</div>
+						<!-- END The Modal -->
+
 						<div id="portfolio-grid" class="clearfix anim" data-anim="fadeIn">
+						<!--	<div class="portfolio-block website">
+								<div class="portfolio-wrapper">
+									<a onclick="showProjectModal(this);" data-projid="2">
+										<img src="img/works/imperawebthumb.png" alt="img/works/work-2.png">
+										<div class="label-block">
+											<div class="label-text text-center">
+												<div class="label-text-inner">
+													<h3 class="text-title">Impera Web</h3>
+													<span class="text-category">Web App</span>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
 							<div class="portfolio-block mobile-app">
 								<div class="portfolio-wrapper">
 									<a onclick="showProjectModal(this);" data-projid="1">
-										<img src="img/works/work-1.png" alt="img/works/work-1.png">
+										<img src="img/works/imperaandroidthumb.png" style="background:transparent;" alt="img/works/work-1.png">
 										<div class="label-block">
 											<div class="label-text text-center">
 												<div class="label-text-inner">
@@ -321,23 +370,8 @@
 							</div>
 							<div class="portfolio-block website">
 								<div class="portfolio-wrapper">
-									<a onclick="showProjectModal(this);" data-projid="2">
-										<img src="img/works/work-2.png" alt="img/works/work-2.png">
-										<div class="label-block">
-											<div class="label-text text-center">
-												<div class="label-text-inner">
-													<h3 class="text-title">Impera Web</h3>
-													<span class="text-category">Web App</span>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="portfolio-block website">
-								<div class="portfolio-wrapper">
 									<a onclick="showProjectModal(this);" data-projid="3">
-										<img src="img/works/work-3.png" alt="img/works/work-3.png">
+										<img src="img/works/agrothumb.png" alt="img/works/work-3.png">
 										<div class="label-block">
 											<div class="label-text text-center">
 												<div class="label-text-inner">
@@ -348,7 +382,7 @@
 										</div>
 									</a>
 								</div>
-							</div>
+							</div>-->
 						</div>
 					</div><!--/. column -->
 				</div><!--/. row -->
@@ -501,21 +535,6 @@
 
 		</footer>
 		<!-- End Footer -->
-		<div id="project-modal" class="vex vex-theme-os" style="display: none">
-			<div class="vex-overlay"></div>
-			<div class="vex-content modal-container">
-				<div class="service-block row"><!--
-					<div class="service-icon text-center half column">
-						<img src="img/services/tailor1.png" style="height: 400px; width: 400px;" alt="">
-					</div>column -->
-					<div class="service-body half column">
-						<i class="fa fa-times modal-cross" aria-hidden="true" onclick="hideModal();"></i>
-						<h3 id="project-modal-title"></h3>
-						<p id="project-modal-description"></p>
-					</div><!--/. column -->
-				</div><!--/. row -->
-			</div>
-		</div>
 
 		<!-- Retinajs -->
 		<script src="js/retina-1.1.0.min.js"></script>
@@ -536,6 +555,10 @@
 		<script src="js/jquery.fitvids.js"></script>
 		<script src="js/detectmobilebrowser.js"></script>
 
+		<script src="js/vex.combined.min.js"></script>
+		<script>vex.defaultOptions.className = 'vex-theme-os'</script>
+		<script src="js/projectdescriptions.js"></script>
+
 		<!-- Fullscreen Image Background Script-->
 		<script src="js/supersized.3.2.7.min.js"></script>
 		<script src="js/background-image.js"></script>
@@ -544,10 +567,6 @@
 		<script src="js/script.js"></script>
 
 		<script type="text/javascript" src="slick/slick.min.js"></script>
-
-		<script src="js/vex.combined.min.js"></script>
-		<script>vex.defaultOptions.className = 'vex-theme-os'</script>
-		<script src="js/projectdescriptions.js"></script>
 
 	</body>
 </html>
