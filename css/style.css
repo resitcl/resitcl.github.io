@@ -131,10 +131,10 @@ img{
 	color: #ffffff;
 }
 .darken a{
-	color: #a9a9a9;
+	color: #666666;
 }
 .darken a:hover{
-	color: #ffffff;
+	color: #0000ff;
 }
 
 /* Section with SVG Separator */
@@ -1241,7 +1241,7 @@ img{
 
 #portfolio-grid .portfolio-block{
 	display:none;
-	float:left;
+/*	float:left;*/
 	overflow:hidden;
 	width: 33.3333333%;
 }
@@ -2043,7 +2043,7 @@ img{
 }
 
 .modal-container {
-	max-width: 800px
+	width: 100%
 }
 
 /* ==========================================================================
@@ -2065,7 +2065,7 @@ img{
 	}
 
 	.modal-container {
-		max-width: 90%
+		width: 100%
 	}
 }
 
@@ -2223,7 +2223,7 @@ img{
 	}
 
 	.modal-container {
-		max-width: 90%
+		width: 100%
 	}
 }
 
@@ -2244,7 +2244,7 @@ img{
 	}
 
 	.modal-container {
-		max-width: 100%
+		width: 100%
 	}
 }
 

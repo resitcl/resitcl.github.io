@@ -29,7 +29,7 @@
 		$('.slick-next').css('background-color', '#373737')
 	})
 
-	
+
 
 	var $window = $(window),
 		separator = $('body').data('separator'), // get separator type

@@ -281,7 +281,7 @@
 		<!-- End Section -->
 
 		<!-- Start Section: Works -->
-		<div id="portfolio-to-inject" style="display: none" class="portfolio-block website">
+		<div id="portfolio-to-inject" style="display: none; opacity: 1;" class="portfolio-block mix_all">
 			<div class="portfolio-wrapper">
 				<a id="portfolio-a" onclick="showProjectModal(this);">
 					<img id="portfolio-image-thumbnail">
@@ -311,9 +311,10 @@
 					<div class="full_width column">
 						<div id="filters" class="text-center anim" data-anim="fadeIn">
 							<ul class="text-center">
-								<li><span class="filter active" data-filter="website mobile-app user-interface video">All</span></li>
-								<li><span class="filter" data-filter="website">Web</span></li>
+								<li><span class="filter active" data-filter="website mobile-app dashboard">All</span></li>
+								<li><span class="filter" data-filter="dashboard">Dashboards</span></li>
 								<li><span class="filter" data-filter="mobile-app">Móvil</span></li>
+								<li><span class="filter" data-filter="website">Web</span></li>
 								<!--<li><span class="filter" data-filter="user-interface">UI</span></li>-->
 								<!--<li><span class="filter" data-filter="video">Video</span></li>-->
 							</ul>
@@ -324,10 +325,10 @@
 							<div class="vex-overlay"></div>
 							<div class="vex-content modal-container">
 								<div class="service-block row">
-									<div class="service-icon text-center half column">
+									<div class="service-icon text-right half column">
 										<img id="project-modal-image" style="height: 400px; width: 400px;" alt="">
 									</div><!--column -->
-									<div class="service-body half column">
+									<div class="service-body one_third column">
 										<i class="fa fa-times modal-cross" aria-hidden="true" onclick="hideModal();"></i>
 										<h3 id="project-modal-title"></h3>
 										<p id="project-modal-description"></p>
@@ -338,51 +339,7 @@
 						<!-- END The Modal -->
 
 						<div id="portfolio-grid" class="clearfix anim" data-anim="fadeIn">
-						<!--	<div class="portfolio-block website">
-								<div class="portfolio-wrapper">
-									<a onclick="showProjectModal(this);" data-projid="2">
-										<img src="img/works/imperawebthumb.png" alt="img/works/work-2.png">
-										<div class="label-block">
-											<div class="label-text text-center">
-												<div class="label-text-inner">
-													<h3 class="text-title">Impera Web</h3>
-													<span class="text-category">Web App</span>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="portfolio-block mobile-app">
-								<div class="portfolio-wrapper">
-									<a onclick="showProjectModal(this);" data-projid="1">
-										<img src="img/works/imperaandroidthumb.png" style="background:transparent;" alt="img/works/work-1.png">
-										<div class="label-block">
-											<div class="label-text text-center">
-												<div class="label-text-inner">
-													<h3 class="text-title">Impera Dashboard</h3>
-													<span class="text-category">Mobile App</span>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="portfolio-block website">
-								<div class="portfolio-wrapper">
-									<a onclick="showProjectModal(this);" data-projid="3">
-										<img src="img/works/agrothumb.png" alt="img/works/work-3.png">
-										<div class="label-block">
-											<div class="label-text text-center">
-												<div class="label-text-inner">
-													<h3 class="text-title">Agroamanecer Web</h3>
-													<span class="text-category">Web App</span>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>-->
+
 						</div>
 					</div><!--/. column -->
 				</div><!--/. row -->
@@ -483,7 +440,7 @@
 			<div id="address-block">
 				<address>
 					<strong>resIT SpA</strong><br>
-					Napoleón 3565, of. 2003<br>
+					Napoleón 3565, of. 1203-A<br>
 					Las Condes, Santiago, Chile<br>
 					<abbr title="Phone">Teléfono:</abbr> +56 9 91389537
 				</address>
@@ -525,7 +482,7 @@
 					<div class="row">
 						<div class="full_width column">
 							<h1 >resIT</h1>
-							<p>&copy; Copyright 2016 - Todos los derechos reservados</p>
+							<p>&copy; Copyright 2017 - Todos los derechos reservados</p>
 						</div><!--/. column -->
 					</div><!--/. row -->
 
@@ -542,6 +499,7 @@
 		<!-- jQuery -->
 		<script src="js/vendor/jquery-1.10.2.min.js"></script>
 
+		<script src="js/projectdescriptions.js"></script>
 		<!-- jQuery Plugins -->
 		<script src="js/jquery.easing.min.js"></script>
 		<script src="js/jquery.scrollTo.min.js"></script>
@@ -557,7 +515,7 @@
 
 		<script src="js/vex.combined.min.js"></script>
 		<script>vex.defaultOptions.className = 'vex-theme-os'</script>
-		<script src="js/projectdescriptions.js"></script>
+
 
 		<!-- Fullscreen Image Background Script-->
 		<script src="js/supersized.3.2.7.min.js"></script>
