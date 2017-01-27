@@ -392,7 +392,7 @@
 	function initialize(){
 
 		var map_canvas = document.getElementById('map');
-		var myLatlng = new google.maps.LatLng(-33.417067, -70.592182); // set your location here
+		var myLatlng = new google.maps.LatLng(-33.413720, -70.573649); // set your location here
 		var map_options = {
 			center: myLatlng,
 			zoom: 16,
