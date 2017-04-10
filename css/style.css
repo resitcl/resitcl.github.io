@@ -2271,3 +2271,11 @@ only screen and (                min-resolution: 2dppx) {
 	cursor: pointer;
 	cursor: hand;
 }
+
+.ourclients {
+	max-width: 1170px; 
+	margin: 0 auto; 
+	padding: 0px 20px; 
+	padding-top: 0px !important; 
+	padding-bottom: 90px;
+}
