@@ -2272,10 +2272,24 @@ only screen and (                min-resolution: 2dppx) {
 	cursor: hand;
 }
 
-.ourclients {
+.our-clients {
 	max-width: 1170px; 
 	margin: 0 auto; 
 	padding: 0px 20px; 
 	padding-top: 0px !important; 
 	padding-bottom: 90px;
+}
+
+.hideme {
+	display: none
+}
+
+.project-modal {
+	height: 400px; 
+	width: 400px;
+}
+
+.inject-porfolio {
+	display: none; 
+	opacity: 1;
 }
