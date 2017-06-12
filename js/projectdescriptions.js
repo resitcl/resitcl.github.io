@@ -88,6 +88,22 @@ var projects = [
 		"classification": "mobile-app",
 		"thumbnail": "img/works/imperaandroidthumb.png"
 	},
+	{
+		"id": 7,
+		"name": "Plataforma de Encuestas - MMA",
+		"description": "Aplicación web, solicitada por el Ministerio del Medio Ambiente, para crear encuestas/formularios personalizados. Este proyecto utiliza Angular 2 en la parte visual de la aplicación <i>(frontend)</i> y Django REST para la parte lógica (<i>backend</i>).",
+		"image": "img/works/mmapds-min.png",
+		"classification": "dashboard",
+		"thumbnail": "img/works/mmapds-min.png"
+	},
+	{
+		"id": 8,
+		"name": "Benchmark App - Gepuc",
+		"description": "Aplicación web orientada a facilitar el levantamiento de información sobre el estado y prácticas de diversas industrias. Utiliza React para generar la parte visual.",
+		"image": "img/works/gepuc-min.png",
+		"classification": "dashboard",
+		"thumbnail": "img/works/gepuc-min.png"
+	}
 ]
 
 injectProyects();
