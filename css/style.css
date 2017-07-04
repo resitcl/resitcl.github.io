@@ -242,9 +242,9 @@ img{
 	color: #ffffff;
 
 	display: inline-block;
-	width:100px; /* you can use % */
+	width: 60px; /* you can use % */
     height: auto;
-	background-size: 100px auto;
+	background-size: 60px auto;
     background-image: url(../img/logo.png);
 	background-position:center;
 	background-repeat:no-repeat;
@@ -302,6 +302,17 @@ img{
 	font-weight: 700;
 	padding: 5px 10px;
 	display: inline-block;
+}
+
+/* Button Download */
+.button-com {
+	border: 2px solid #666666;
+	color: #333333!important;
+}
+.button-com:hover{
+	color: #ffffff!important;
+	border: 2px solid #e1390e;
+	background: #e1390e;
 }
 
 /* Button Dark Style */
@@ -437,7 +448,7 @@ img{
 
 }
 
-@media only screen and (max-width : 767px){
+@media only screen and (max-width : 900px){
 
     .column{
         width: 100%;
@@ -2052,7 +2063,7 @@ img{
    ========================================================================== */
 
 /* Portrait tablet to landscape and desktop */
-@media only screen and (min-width: 768px) and (max-width: 979px){
+@media only screen and (min-width: 901) and (max-width: 979px){
 
 	#about .team-grid .t-block,
 	#skill .skill-grid .skill-block,
@@ -2071,7 +2082,7 @@ img{
 }
 
 /* Landscape phone to portrait tablet */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 900px){
 	#header.page{
 		height: 90px;
 	}
@@ -2258,7 +2269,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 	.logo a{
-		background-image: url(../img/logo@2x.png);
+		background-image: url(../img/logo.png);
 	}
 	#status{
 		background-image: url(../img/AjaxLoader@2x.gif);

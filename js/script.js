@@ -350,8 +350,7 @@
 		var winHeight = $window.height(), // window height
 			winWidth = $window.width(), // window width
 			scrollHeight = Math.floor(winHeight-90);
-
-		if ( winWidth <= '767' && scrollHeight <= navHeight ) {
+		if ( winWidth <= '900' || (winWidth <= '767' && scrollHeight <= navHeight)) {
 			$('.nav').css({ 'overflow-y' : 'scroll', 'height' : scrollHeight  });
 		}else{
 			$('.nav').removeAttr('style');
