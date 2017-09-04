@@ -350,8 +350,7 @@
 		var winHeight = $window.height(), // window height
 			winWidth = $window.width(), // window width
 			scrollHeight = Math.floor(winHeight-90);
-
-		if ( winWidth <= '767' && scrollHeight <= navHeight ) {
+		if ( winWidth <= '900' || (winWidth <= '767' && scrollHeight <= navHeight)) {
 			$('.nav').css({ 'overflow-y' : 'scroll', 'height' : scrollHeight  });
 		}else{
 			$('.nav').removeAttr('style');
@@ -392,7 +391,11 @@
 	function initialize(){
 
 		var map_canvas = document.getElementById('map');
+<<<<<<< HEAD
 		var myLatlng = new google.maps.LatLng(-33.4136352, -70.57368); // set your location here
+=======
+		var myLatlng = new google.maps.LatLng(-33.426679, -70.615905); // set your location here
+>>>>>>> e42cf8b3c8cf11165c78a82fd43a1222fdaa8704
 		var map_options = {
 			center: myLatlng,
 			zoom: 16,
