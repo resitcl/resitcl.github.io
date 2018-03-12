@@ -40,8 +40,8 @@
 	/* On Load */
 	$window.load(function() { // makes sure the whole site is loaded
 		$('#status').fadeOut(); // will first fade out the loading animation
-		$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-		$('body').delay(450).removeClass('preload'); // Animate CSS after page load
+		$('#preloader').fadeOut('slow'); // will fade out the white DIV that covers the website.
+		$('body').removeClass('preload'); // Animate CSS after page load
 	});
 
 	/* Contact form */

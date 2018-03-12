@@ -22,9 +22,9 @@
 				// Components
 				slide_links				:	'false',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 				slides					:	[			// Slideshow Images
-						{image : 'img/bb-4-resized.jpg', title : '', thumb : '', url : ''},
-						{image : 'img/mac-1.jpg', title : '', thumb : '', url : ''},
-						{image : 'img/bb-1.jpg', title : '', thumb : '', url : ''}
+						{image : 'http://res.cloudinary.com/resit/image/upload/v1520869943/bb-4-resized_whr7ur.jpg', title : '', thumb : '', url : ''},
+						{image : 'http://res.cloudinary.com/resit/image/upload/v1520870048/mac-1_urolhy.jpg', title : '', thumb : '', url : ''},
+						{image : 'http://res.cloudinary.com/resit/image/upload/v1520869943/bb-1_fo23do.jpg', title : '', thumb : '', url : ''}
 				]
 			});
 		});
