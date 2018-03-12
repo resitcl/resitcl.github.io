@@ -1556,7 +1556,7 @@ img{
    ========================================================================== */
 
 #contact{
-	background: transparent url("../img/contact-2.jpg") no-repeat center center fixed;
+	background: transparent url("http://res.cloudinary.com/resit/image/upload/c_scale,w_1130/v1520870328/contact-2_tl0vus.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
