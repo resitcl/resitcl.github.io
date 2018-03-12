@@ -1,0 +1,13 @@
+{
+  "name": "ResIt Software House",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Santiago Martí",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
